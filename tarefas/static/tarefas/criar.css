@@ -1,0 +1,50 @@
+/* ===== CONFIGURAÇÃO GERAL ===== */
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #d1cbcb;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== CONTAINER CENTRAL ===== */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* ===== TÍTULO ===== */
+.titulo {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* ===== CARD DO FORM ===== */
+.form-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* ===== CAMPOS DO FORM ===== */
+form p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+form label {
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 6px;
+}
+
+form input,
+form textarea,
+form select {
+    padding: 12px;
+    border: 1px solid #dce1e7;
+}

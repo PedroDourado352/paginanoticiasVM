@@ -1,0 +1,195 @@
+/* Reset moderno */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f5f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff4b5c;
+}
+
+.search-container {
+    flex: 1;
+    max-width: 400px;
+    margin-left: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #ff4b5c;
+    box-shadow: 0 0 5px rgba(255,75,92,0.4);
+}
+
+/* Layout lateral + conteúdo */
+.layout {
+    display: flex;
+    gap: 30px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar li {
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.sidebar li:hover {
+    background-color: #ffedf0;
+    color: #ff4b5c;
+}
+
+/* Conteúdo principal */
+.main {
+    flex: 1;
+}
+
+/* Destaque da obra */
+.highlight {
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+}
+
+.highlight h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    font-size: 15px;
+    color: #555;
+}
+
+/* Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 15px;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.tags-label {
+    font-weight: 600;
+}
+
+.tags button {
+    border: none;
+    background-color: #ffedf0;
+    color: #ff4b5c;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.tags button:hover {
+    background-color: #ff4b5c;
+    color: #fff;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+}
+
+/* GRID dos cards exatamente como a imagem */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 25px; /* espaço entre os cards */
+    margin-top: 20px;
+}
+
+/* CardS DE NOTICIAS unificado */
+.card {
+    margin-right: 10px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 25px; /* cantos mais arredondados como no desenho */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    height: 120px; /* altura igual para todos */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform .2s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}

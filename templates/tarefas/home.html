@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Notícias VM</title>
+    <link rel="stylesheet" href="{% static 'tarefas/style_v2.css' %}" />
+</head>
+<body>
+    <div class="page">
+
+        <!-- Cabeçalho -->
+        <header class="header">
+            <h1 class="logo">PORTAL NOTÍCIAS VM</h1>
+
+            <div class="search-container">
+                <input
+                    type="text"
+                    class="search-input"
+                    placeholder="O que você procura?"
+                />
+            </div>
+        </header>
+
+        <div class="layout">
+            <!-- Menu lateral -->
+            <nav class="sidebar">
+                <ul>
+                    <li>Início</li>
+                    <li>Obras em andamento</li>
+                    <li>Indicadores (BIs)</li>
+                    <li>Segurança do trabalho</li>
+                    <li>Financeiro</li>
+                    <li>Comunicação</li>
+                </ul>
+            </nav>
+
+            <!-- Conteúdo principal -->
+            <main class="main">
+                <!-- Destaque da obra -->
+               <address> 
+                <section class="highlight">
+                    <h2>Destaque da obra / comunicado importante</h2>
+                    <p>
+                        Ex.: "Fechamento do mês – Obras Regionais Norte" ou alertas de segurança.
+                    </p>
+                </section>
+                </address> 
+                <!-- Tags -->
+                <section class="tags">
+                    <span class="tags-label">Busque por tags:</span>
+                    <button>Obras</button>
+                    <button>Segurança</button>
+                    <button>Prazo</button>
+                    <button>Custos</button>
+                    <button>Qualidade</button>
+                    <button>TI</button>
+                    <button>RH</button>
+                </section>
+
+                <!-- Notícias recentes -->
+                <section class="news">
+                    <h2>Notícias recentes</h2>
+
+                    <div class="news-grid">
+
+                        <a href="{% url 'tarefas:listar_noticias' %}">
+                            <article class="card">
+                                <h3>Empreendimentos entregues da viana e moura em 2025</h3>
+                                <p>Resumo curto da notícia...</p>
+                            </article>
+                        </a>
+
+                        <article class="card">
+                            <h3>Novo procedimento de segurança em obra</h3>
+                            <p>Resumo curto da notícia...</p>
+                        </article>
+
+                        <article class="card">
+                            <h3>Atualização de dashboards</h3>
+                            <p>Resumo curto da notícia...</p>
+                        </article>
+
+                        <article class="card">
+                            <h3>Lançamento Portal de notícias VM</h3>
+                            <p>Resumo curto da notícia...</p>
+                        </article>
+
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

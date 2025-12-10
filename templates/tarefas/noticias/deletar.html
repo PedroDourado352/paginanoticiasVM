@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Deletar notícia</title>
+</head>
+<body>
+    <h1>Deletar notícia</h1>
+
+    <p>Tem certeza que deseja deletar a notícia: <strong>{{ noticia.titulo }}</strong>?</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Sim, deletar</button>
+        <a href="{% url 'tarefas:listar_noticias' %}">Cancelar</a>
+    </form>
+</body>
+</html>
+
+

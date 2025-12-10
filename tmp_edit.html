@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar notícia</title>
+</head>
+<body>
+    <h1>Editar notícia: teste</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        <input type="hidden" name="csrfmiddlewaretoken" value="G2za531breVw89adMwfyTxIjXVWD0z4W1C8vhc3OYFZamXOsWGwKcu4i4VglD6gq">
+        <p>
+    <label for="id_titulo">Titulo:</label>
+    <input type="text" name="titulo" value="teste" maxlength="200" required id="id_titulo">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_conteudo">Conteudo:</label>
+    <textarea name="conteudo" cols="40" rows="10" required id="id_conteudo">
+teste1</textarea>
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_data">Data:</label>
+    <input type="text" name="data" value="2025-04-12" required id="id_data">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_autor">Autor:</label>
+    <input type="text" name="autor" value="teste" maxlength="100" required id="id_autor">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_imagem">Imagem:</label>
+    <input type="file" name="imagem" accept="image/*" id="id_imagem">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_categoria">Categoria:</label>
+    <input type="text" name="categoria" value="teste" maxlength="100" required id="id_categoria">
+    
+    
+      
+    
+  </p>
+        <button type="submit">Salvar alterações</button>
+    </form>
+
+    <p>
+        <a href="/tarefas/noticias/">Voltar para lista</a>
+    </p>
+</body>
+</html>
+
+
+

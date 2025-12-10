@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'tarefas/criar.css' %}" />
+    <title>Criar notícia</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="titulo">Criar notícia</h1>
+
+        <div class="form-card">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Salvar</button>
+            </form>
+
+            <p>
+                <a href="{% url 'tarefas:listar_noticias' %}">Voltar para lista</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
+

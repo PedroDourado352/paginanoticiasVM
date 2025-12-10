@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ noticia.titulo }}</title>
+</head>
+<body>
+    <h1>{{ noticia.titulo }}</h1>
+    <p><em>{{ noticia.data }} - {{ noticia.autor }} ({{ noticia.categoria }})</em></p>
+
+    {% if noticia.imagem %}
+        <p><img src="{{ noticia.imagem.url }}" alt="{{ noticia.titulo }}" style="max-width: 400px;"></p>
+    {% endif %}
+
+    <p>{{ noticia.conteudo }}</p>
+
+    <p>
+        <a href="{% url 'tarefas:atualizar_noticia' noticia.id %}">Editar</a> |
+        <a href="{% url 'tarefas:deletar_noticia' noticia.id %}">Deletar</a> |
+        <a href="{% url 'tarefas:listar_noticias' %}">Voltar para lista</a>
+    </p>
+</body>
+</html>
+
+

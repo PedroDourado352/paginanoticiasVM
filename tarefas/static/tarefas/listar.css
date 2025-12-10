@@ -1,0 +1,305 @@
+/* ---------- RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: #f5f6f7;
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- LAYOUT PRINCIPAL ---------- */
+.page {
+    width: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    gap: 0px;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+    grid-column: 1 / -1;
+    background: #ffffff;
+    padding: 16px 24px;
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #b93b3b;
+    letter-spacing: 0.5px;
+}
+
+.search input[type="search"] {
+    width: 280px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* ---------- SIDEBAR ---------- */
+.sidebar {
+    background: #ffffff;
+    padding: 24px;
+    border-right: 1px solid #ececec;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.sidebar nav a:hover {
+    color: #b93b3b;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+.main {
+    padding: 24px 40px;
+}
+
+/* HERO */
+.hero {
+    background: #fff;
+    padding: 18px 20px;
+    border-radius: 6px;
+    border: 1px solid #e6e6e6;
+    margin-bottom: 22px;
+}
+
+.hero h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.hero .lead {
+    color: #666;
+}
+
+/* TAGS */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 18px 0;
+}
+
+.tag {
+    background: #eee;
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* SECTION TITLE */
+.section-title {
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+/* ---------- FILTROS ---------- */
+.filter-card {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.f-input {
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    border-radius: 4px;
+    background: #fff;
+    color: #444;
+}
+
+.btn-filter {
+    background: #b93b3b;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-filter:hover {
+    background: #992f2f;
+}
+
+/* ---------- GRID DE NOTÍCIAS ---------- */
+.news-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* CARD – estilo geral */
+.news-card {
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    padding: 18px;
+    border-radius: 4px;
+    display: block;
+}
+
+/* CARD grande (o primeiro) */
+.news-card.large {
+    padding: 22px;
+}
+
+/* TÍTULO */
+.news-card .title {
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #222;
+}
+
+.news-card .title:hover {
+    color: #b93b3b;
+}
+
+/* RESUMO */
+.summary {
+    color: #777;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* META */
+.meta {
+    margin-top: 12px;
+    color: #999;
+    font-size: 12.5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* BOTÃO VER MAIS */
+.read-more {
+    text-decoration: none;
+    color: #b93b3b;
+    border: 1px solid #ddd;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.read-more:hover {
+    background: #f8ecec;
+    border-color: #b93b3b;
+}
+
+/* ---------- TIMELINE (Últimas atualizações) ---------- */
+aside .aside-card {
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    padding: 18px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside li {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px dashed #f2f2f2;
+}
+
+aside li:last-child {
+    border-bottom: none;
+}
+
+aside .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #b93b3b;
+    margin-top: 6px;
+}
+
+/* ---------- PAGINAÇÃO ---------- */
+.pagination {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.pagination .pag {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #e6e6e6;
+    text-decoration: none;
+    color: #333;
+}
+
+.pagination .pag:hover {
+    background: #f3f3f3;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+    text-align: center;
+    padding: 16px;
+    color: #777;
+    font-size: 13px;
+    background: #ffffff;
+    border-top: 1px solid #e6e6e6;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 720px) {
+    .header .logo {
+        font-size: 18px;
+    }
+
+    .search input[type="search"] {
+        width: 180px;
+    }
+}

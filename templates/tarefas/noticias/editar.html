@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<<<<<<< HEAD
+{% load static %}
+=======
+>>>>>>> 7370c019ebe14b446f4870769a8e2b4fa38d1996
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar notícia</title>
+<<<<<<< HEAD
+    <link rel="stylesheet" href="{% static 'tarefas/editar.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Editar notícia: {{ noticia.titulo }}</h1>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Salvar alterações</button>
+        </form>
+
+        <a href="{% url 'tarefas:listar_noticias' %}" class="back-link">← Voltar para a lista</a>
+    </div>
+=======
+</head>
+<body>
+    <h1>Editar notícia: {{ noticia.titulo }}</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar alterações</button>
+    </form>
+
+    <p>
+        <a href="{% url 'tarefas:listar_noticias' %}">Voltar para lista</a>
+    </p>
+>>>>>>> 7370c019ebe14b446f4870769a8e2b4fa38d1996
+</body>
+</html>
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7370c019ebe14b446f4870769a8e2b4fa38d1996
